@@ -21,10 +21,10 @@ return new class extends Migration
             $table->string('segment', 50);
             $table->string('postal_code', 10);
             $table->string('product_id');
-            $table->decimal('sales', 10, 6);
+            $table->decimal('sales', 15, 6);
             $table->integer('quantity');
-            $table->decimal('discount', 5, 6);
-            $table->decimal('profit', 10, 6);
+            $table->decimal('discount', 8, 6)->default(0);
+            $table->decimal('profit', 15, 6);
             $table->timestamps();
 
             // Claves foráneas
